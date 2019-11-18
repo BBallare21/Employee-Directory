@@ -23,8 +23,8 @@ function Nav({ handleSearchChange }) {
               DOB
             </span>
           </div>
-          <input type="date" className="form-control" />
-          <input type="date" className="form-control" />
+          <input type="date" className="form-control" id="from-date" />
+          <input type="date" className="form-control" id="to-date" />
         </div>
         <div className="search-area col-4">
           <SearchBox handleSearchChange={handleSearchChange} />

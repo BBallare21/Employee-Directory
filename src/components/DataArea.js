@@ -16,7 +16,7 @@ function DataArea() {
     order: "descend"
   });
 
-  const [headings, setHeadings] = useState([
+  const [headings] = useState([
     { name: "Image", width: "10%" },
     { name: "Name", width: "10%" },
     { name: "Phone", width: "20%" },
@@ -101,7 +101,7 @@ function DataArea() {
       const newDate = new Date(item.dob.date)
       return newDate > fromDate && newDate < toDate
     });
-    setUsers({ ...users, filteredUsers: filteredList });
+    setUsers({ ...users, filteredUsers: filterDOB });
   }
 
 return (

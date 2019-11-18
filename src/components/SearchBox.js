@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/SearchBox.css";
+import UserContext from "../utils/UserContext";
 
-function SearchBox({ handleSearchChange }) {
+function SearchBox() {
+  const { handleSearchChange, handleDOBSort } = useContext(UserContext)
   return (
     <div className="searchbox">
       <form className="form-inline">
@@ -12,7 +14,7 @@ function SearchBox({ handleSearchChange }) {
           aria-label="Search"
           onChange={e => handleSearchChange(e)}
         />
-        <button className="btn my-2 my-sm-0" type="submit">
+        <button className="btn my-2 my-sm-0" type="submit" onClick = {event => handleDOBSort(event)}>
           Search
         </button>
       </form>
